@@ -3,10 +3,7 @@ public class Main {
         int a = 1;
         int b = 2;
         int c = 3;
-        int d = a+b+c;
-        a = d;
-        b = d;
-        c = d;
+        a = b = c = a + b + c;
         System.out.println(a + " " + b + " " + c);
         // Please write your code here.
     }
