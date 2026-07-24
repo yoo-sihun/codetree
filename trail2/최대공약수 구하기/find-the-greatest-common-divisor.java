@@ -5,23 +5,18 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int m = sc.nextInt();
-        commonDivisor(n, m);// Please write your code here.
+        
+        commonDivisor(n, m);
+    
     }
 
     public static void commonDivisor(int n, int m) {
-        if(n < m) {
-            for(int i = n; i > 0; i--) {
-                if(m % i == 0 && n % i == 0){
-                    System.out.println(i);
-                    break;
-                }
-            }
-        }else {
-            for(int i = m; i > 0; i--) {
-                if(m % i == 0 && n % i == 0){
-                    System.out.println(i);
-                    break;
-                }
+        int min = Math.min(n, m);
+
+        for (int i = min; i > 0; i--) {
+            if (n % i == 0 && m % i == 0) {
+                System.out.println(i);
+                break; 
             }
         }
     }
